@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         tv = (TextView) findViewById(R.id.text1);
 
+        // Il bottone 1 carica il contenuto di una pagina web
         Button b = (Button) findViewById(R.id.button);
 
         assert b != null;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             }
         });
 
+        // Il bottone 2 è utilizzato come esempio per caricare un fragment
         Button b2 = (Button) findViewById(R.id.button2);
 
         assert b2 != null;
