@@ -14,7 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener {
 
     private TextView tv;
 
@@ -35,6 +35,22 @@ public class MainActivity extends AppCompatActivity {
                 ct.execute();
             }
         });
+
+        Button b2 = (Button) findViewById(R.id.button2);
+
+        assert b2 != null;
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.container, new BlankFragment()).commit();
+            }
+        });
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /*
